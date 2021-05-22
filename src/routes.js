@@ -14,21 +14,21 @@ const dashboardRoutes = [
     name: "Upgrade to PRO",
     icon: "nc-icon nc-alien-33",
     component: Upgrade,
-    layout: "/admin",
+    layout: "/MovieApp/admin",
   },
   {
     path: "/dashboard",
     name: "Dashboard",
     icon: "nc-icon nc-chart-pie-35",
     component: Dashboard,
-    layout: "/admin",
+    layout: "/MovieApp/admin",
   },
   {
     path: "/user",
     name: "User Profile",
     icon: "nc-icon nc-circle-09",
     component: UserProfile,
-    layout: "/admin",
+    layout: "/MovieApp/admin",
   },
 
   {
@@ -43,14 +43,14 @@ const dashboardRoutes = [
     name: "Add movie",    
     icon: "nc-icon nc-bell-55" ,
     component: Notifications,
-    layout: "/admin",
+    layout: "/MovieApp/admin",
   },
   {
     path: "/table",                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
     name: "Movies",
     icon: "nc-icon nc-notes",
     component: MoviesAdmin,
-    layout: "/admin",
+    layout: "/MovieApp/admin",
   },                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
 ];                                                                                                                    
 

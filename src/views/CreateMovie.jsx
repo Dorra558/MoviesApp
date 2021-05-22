@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import {Container,Form,Button} from 'react-bootstrap'
+import '../App.css'
 import axios from 'axios'
 
 
@@ -8,7 +9,8 @@ function CreateMovies() {
     const [values, setValues] = useState({
         title: '',
         description: '',
-        date:'',
+        year:'',
+        posterUrl:'',
       });
     const handleChange = e => {
         const { name, value } = e.target
@@ -37,11 +39,15 @@ function CreateMovies() {
                 </Form.Group>
 
                 <Form.Group>
-                    <Form.Control type="text" placeholder="Enter date" name="date" value={values.date}  onChange={handleChange}/>
+                    <Form.Control type="text" placeholder="Enter date" name="year" value={values.year}  onChange={handleChange}/>
                 </Form.Group>
 
                 <Form.Group>
                     <Form.Control type="text" placeholder="Enter decription"  name="description" value={values.description}  onChange={handleChange}/>
+                </Form.Group>
+
+                <Form.Group>
+                    <Form.Control type="text" placeholder="image"  name="posterUrl" value={values.posterUrl}  onChange={handleChange}/>
                 </Form.Group>
 
                 <Button variant="primary" type="submit">

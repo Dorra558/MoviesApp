@@ -188,9 +188,10 @@
     },
     {
       "title": "Titanic",
-      "description": "https://www.telerama.fr/sites/tr_master/files/4d284051-ddd4-4ee7-8a15-74064ea61510_2.jpg",
-      "date": "2007",
-      "id": 13
+      "description": "Le RMS Titanic est un paquebot transatlantique britannique qui fait naufrage dans l'océan Atlantique Nord en 1912 à la suite d'une collision avec un iceberg,",
+      "year": "1997",
+      "posterUrl": "https://www.telerama.fr/sites/tr_master/files/4d284051-ddd4-4ee7-8a15-74064ea61510_2.jpg",
+      "id": 15
     }
   ]
 }
