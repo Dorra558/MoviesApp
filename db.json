@@ -1,0 +1,196 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "Beetlejuice",
+      "year": "1988",
+      "runtime": "92",
+      "genres": [
+        "Comedy",
+        "Fantasy"
+      ],
+      "rating": 4,
+      "director": "Tim Burton",
+      "actors": "Alec Baldwin, Geena Davis, Annie McEnroe, Maurice Page",
+      "plot": "A couple of recently deceased ghosts contract the services of a \"bio-exorcist\" in order to remove the obnoxious new owners of their house.",
+      "posterUrl": "https://www.telerama.fr/sites/tr_master/files/34b60790-1134-464e-8a47-7b10807ef330_2.jpg"
+    },
+    {
+      "id": 2,
+      "title": "The Cotton Club",
+      "year": "1984",
+      "runtime": "127",
+      "genres": [
+        "Crime",
+        "Drama",
+        "Music"
+      ],
+      "rating": 4,
+      "director": "Francis Ford Coppola",
+      "actors": "Richard Gere, Gregory Hines, Diane Lane, Lonette McKee",
+      "plot": "The Cotton Club was a famous night club in Harlem. The story follows the people that visited the club, those that ran it, and is peppered with the Jazz music that made it so famous.",
+      "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTU5ODAyNzA4OV5BMl5BanBnXkFtZTcwNzYwNTIzNA@@._V1_SX300.jpg"
+    },
+    {
+      "id": 3,
+      "title": "The Shawshank Redemption",
+      "year": "1994",
+      "runtime": "142",
+      "genres": [
+        "Crime",
+        "Drama"
+      ],
+      "rating": 5,
+      "director": "Frank Darabont",
+      "actors": "Tim Robbins, Morgan Freeman, Bob Gunton, William Sadler",
+      "plot": "Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.",
+      "posterUrl": "https://images-na.ssl-images-amazon.com/images/I/519NBNHX5BL._AC_SY445_.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Crocodile Dundee",
+      "year": "1986",
+      "runtime": "97",
+      "genres": [
+        "Adventure",
+        "Comedy"
+      ],
+      "rating": 3,
+      "director": "Peter Faiman",
+      "actors": "Paul Hogan, Linda Kozlowski, John Meillon, David Gulpilil",
+      "plot": "An American reporter goes to the Australian outback to meet an eccentric crocodile poacher and invites him to New York City.",
+      "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTg0MTU1MTg4NF5BMl5BanBnXkFtZTgwMDgzNzYxMTE@._V1_SX300.jpg"
+    },
+    {
+      "id": 5,
+      "title": "Valkyrie",
+      "year": "2008",
+      "runtime": "121",
+      "genres": [
+        "Drama",
+        "History",
+        "Thriller"
+      ],
+      "rating": 4,
+      "director": "Bryan Singer",
+      "actors": "Tom Cruise, Kenneth Branagh, Bill Nighy, Tom Wilkinson",
+      "plot": "A dramatization of the 20 July assassination and political coup plot by desperate renegade German Army officers against Hitler during World War II.",
+      "posterUrl": "https://img6.cdn.cinoche.com/images/efcfe6cd4ad91229e2f3e11141302693.jpg"
+    },
+    {
+      "id": 6,
+      "title": "Ratatouille",
+      "year": "2007",
+      "runtime": "111",
+      "genres": [
+        "Animation",
+        "Comedy",
+        "Family"
+      ],
+      "rating": 4,
+      "director": "Brad Bird, Jan Pinkava",
+      "actors": "Patton Oswalt, Ian Holm, Lou Romano, Brian Dennehy",
+      "plot": "A rat who can cook makes an unusual alliance with a young kitchen worker at a famous restaurant.",
+      "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTMzODU0NTkxMF5BMl5BanBnXkFtZTcwMjQ4MzMzMw@@._V1_SX300.jpg"
+    },
+    {
+      "id": 7,
+      "title": "City of God",
+      "year": "2002",
+      "runtime": "130",
+      "genres": [
+        "Crime",
+        "Drama"
+      ],
+      "rating": 3,
+      "director": "Fernando Meirelles, Kátia Lund",
+      "actors": "Alexandre Rodrigues, Leandro Firmino, Phellipe Haagensen, Douglas Silva",
+      "plot": "Two boys growing up in a violent neighborhood of Rio de Janeiro take different paths: one becomes a photographer, the other a drug dealer.",
+      "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjA4ODQ3ODkzNV5BMl5BanBnXkFtZTYwOTc4NDI3._V1_SX300.jpg"
+    },
+    {
+      "id": 8,
+      "title": "Memento",
+      "year": "2000",
+      "runtime": "113",
+      "genres": [
+        "Mystery",
+        "Thriller"
+      ],
+      "rating": 5,
+      "director": "Christopher Nolan",
+      "actors": "Guy Pearce, Carrie-Anne Moss, Joe Pantoliano, Mark Boone Junior",
+      "plot": "A man juggles searching for his wife's murderer and keeping his short-term memory loss from being an obstacle.",
+      "posterUrl": "https://www.telerama.fr/sites/tr_master/files/9486fd50-3c87-4403-8f86-120471836bb1_2.jpg"
+    },
+    {
+      "id": 9,
+      "title": "The Intouchables",
+      "year": "2011",
+      "runtime": "112",
+      "genres": [
+        "Biography",
+        "Comedy",
+        "Drama"
+      ],
+      "rating": 5,
+      "director": "Olivier Nakache, Eric Toledano",
+      "actors": "François Cluzet, Omar Sy, Anne Le Ny, Audrey Fleurot",
+      "plot": "After he becomes a quadriplegic from a paragliding accident, an aristocrat hires a young man from the projects to be his caregiver.",
+      "posterUrl": "https://m.media-amazon.com/images/M/MV5BMTYxNDA3MDQwNl5BMl5BanBnXkFtZTcwNTU4Mzc1Nw@@._V1_.jpg"
+    },
+    {
+      "id": 10,
+      "title": "Stardust",
+      "year": "2007",
+      "rating": 3.5,
+      "runtime": "127",
+      "genres": [
+        "Adventure",
+        "Family",
+        "Fantasy"
+      ],
+      "director": "Matthew Vaughn",
+      "actors": "Ian McKellen, Bimbo Hart, Alastair MacIntosh, David Kelly",
+      "plot": "In a countryside town bordering on a magical land, a young man makes a promise to his beloved that he'll retrieve a fallen star by venturing into the magical realm.",
+      "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjkyMTE1OTYwNF5BMl5BanBnXkFtZTcwMDIxODYzMw@@._V1_SX300.jpg"
+    },
+    {
+      "id": 11,
+      "title": "Apocalypto",
+      "year": "2006",
+      "rating": 4.5,
+      "runtime": "139",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Drama"
+      ],
+      "director": "Mel Gibson",
+      "actors": "Rudy Youngblood, Dalia Hernández, Jonathan Brewer, Morris Birdyellowhead",
+      "plot": "As the Mayan kingdom faces its decline, the rulers insist the key to prosperity is to build more temples and offer human sacrifices. Jaguar Paw, a young man captured for sacrifice, flees to avoid his fate.",
+      "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BNTM1NjYyNTY5OV5BMl5BanBnXkFtZTcwMjgwNTMzMQ@@._V1_SX300.jpg"
+    },
+    {
+      "id": 12,
+      "title": "Taxi Driver",
+      "year": "1976",
+      "rating": 4,
+      "runtime": "113",
+      "genres": [
+        "Crime",
+        "Drama"
+      ],
+      "director": "Martin Scorsese",
+      "actors": "Diahnne Abbott, Frank Adu, Victor Argo, Gino Ardito",
+      "plot": "A mentally unstable Vietnam War veteran works as a night-time taxi driver in New York City where the perceived decadence and sleaze feeds his urge for violent action, attempting to save a preadolescent prostitute in the process.",
+      "posterUrl": "https://media.senscritique.com/media/000012416763/source_big/Taxi_Driver.jpg"
+    },
+    {
+      "title": "Titanic",
+      "description": "https://www.telerama.fr/sites/tr_master/files/4d284051-ddd4-4ee7-8a15-74064ea61510_2.jpg",
+      "date": "2007",
+      "id": 13
+    }
+  ]
+}
