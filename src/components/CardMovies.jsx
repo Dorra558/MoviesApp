@@ -6,7 +6,7 @@ import '../App.css'
 
 
 function CardMovies({search, movie,getFavorites,addFavorite}) {
-  
+  notifications
     // const [movie, setMovie] = useState([])
     // const getMovie = ()=>{
     //   fetch('movies.json').then(
@@ -65,4 +65,5 @@ function CardMovies({search, movie,getFavorites,addFavorite}) {
   
    }
 export default CardMovies
+
 

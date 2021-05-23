@@ -7,6 +7,7 @@ import Maps from "views/Maps.js";
 import Notifications from "views/Notifications.js";
 import Upgrade from "views/Upgrade.js";
 
+
 const dashboardRoutes = [
   {
     upgrade: true,
@@ -36,7 +37,7 @@ const dashboardRoutes = [
     name: "Maps",
     icon: "nc-icon nc-pin-3",
     component: Maps,
-    layout: "/admin",
+    layout: "/MovieApp/admin",
   },
   {
     path: "/notifications",
@@ -54,5 +55,6 @@ const dashboardRoutes = [
   },                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
 ];                                                                                                                    
 
-export default dashboardRoutes;                                                                                                                                                                                                                                                                                                                                                                                                                                                   
+export default dashboardRoutes;
+                                                                                                                                                                                                                                                                                                                                                                                                                                          
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             

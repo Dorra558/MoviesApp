@@ -7,11 +7,11 @@ import Footer from './footer'
 import React, {useState} from 'react'
 
 
-function Home ({movie,favorites,getFavorites, addFavorite}) {
-const [search,setSearch ] = useState("") 
-const handleChange= (e)=>{
-  setSearch(e.target.value)
-}
+function Home ({movie,favorites,getFavorites, addFavorite, search,handleChange}) {
+// const [search,setSearch ] = useState("") 
+// const handleChange= (e)=>{
+//   setSearch(e.target.value)
+// }
 
   return (
     <div className="App">

@@ -19,6 +19,13 @@ import axios from 'axios'
 
 function App() {
 
+// **********search function******************
+
+  const [search,setSearch ] = useState("") 
+  const handleChange= (e)=>{
+    setSearch(e.target.value)
+  }
+
 
   const [movie, setMovie] = useState([])
   const getMovie = ()=>{
@@ -48,8 +55,8 @@ function App() {
     <BrowserRouter>
       
     <Switch>
-      <Route path="/MovieApp/admin"> <AdminLayout/> </Route>
-      <Route exact path="/MovieApp"> <Home movie={movie} getMovie={getMovie} favorites={favorites} getFavorites={getFavorites} addFavorite={addFavorite} /></Route>
+      <Route path="/MovieApp/admin"> <AdminLayout search={search} handleChange={handleChange}/> </Route>
+      <Route exact path="/MovieApp"> <Home search={search} handleChange={handleChange} movie={movie} getMovie={getMovie} favorites={favorites} getFavorites={getFavorites} addFavorite={addFavorite} /></Route>
         <Route path="/MovieApp/movies" component={Movies} />
         <Route path="/MovieApp/favorit" ><Favorit movie={movie} getMovie={getMovie} favorites={favorites} favoriteMovie={favoriteMovie}/></Route>
       {/* <Redirect from="/" to="/admin/dashboard" /> */}
