@@ -25,7 +25,7 @@ function CreateMovies() {
 
     const addFilm = (event) =>{
         event.preventDefault()
-        axios.post("http://localhost:3004/posts",values)
+        axios.post("https://movies-b8129-default-rtdb.firebaseio.com/posts.json",JSON.stringify(values))
         .then((response) => console.log(response))
               .catch((error) => console.log(error));
     }

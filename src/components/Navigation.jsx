@@ -1,5 +1,5 @@
 import React from 'react'
-import {Navbar,Nav, Container}from 'react-bootstrap'
+import {Navbar,Nav, Container, Button}from 'react-bootstrap'
 import '../App.css'
 import { Link } from "react-router-dom";
 
@@ -24,9 +24,12 @@ function Navigation({handleChange, favorites}) {
                     </div>
                   
                     <Link to="/MovieApp/favorit"><i class="fas fa-heart text-white iconNav "></i><span class="badge bg-danger rounded-circle mr-4" id="val">{favorites}</span></Link>
-                    <i class="fas fa-user text-white iconNav"></i>
+                    {/* <i class="fas fa-user text-white iconNav"></i> */}
                 </Navbar.Collapse>
+                <Button variant="dark" className="text-white">Sign In</Button>
+                <Button variant="danger" className="text-white">Sign Up</Button>
               </Container>
+           
             </Navbar>         
         </div>
     )

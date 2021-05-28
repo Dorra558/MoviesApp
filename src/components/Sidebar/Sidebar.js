@@ -1,10 +1,9 @@
 
 import React, { Component } from "react";
 import { useLocation, NavLink } from "react-router-dom";
+import 'App.css'
 
 import { Nav } from "react-bootstrap";
-
-import logo from "assets/img/reactlogo.png";
 
 function Sidebar({ color, image, routes }) {
   const location = useLocation();
@@ -27,9 +26,9 @@ function Sidebar({ color, image, routes }) {
           >
 
           </a>
-          <a className="simple-text" href="http://www.creative-tim.com">
+
           <span className="titlLogo">Movies</span><span className="titlLogo2">On</span>
-          </a>
+
         </div>
         <Nav>
           {routes.map((prop, key) => {

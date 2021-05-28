@@ -2,7 +2,7 @@ import React, {useState,useEffect} from 'react'
 import {Row, Container,Form, Col, Card,Button, Modal} from 'react-bootstrap' 
 import axios from 'axios'
 
-function UpdateMovies({el}) {
+function UpdateMovies({el,movie}) {
 
     const [show, setShow] = useState(false);
 
@@ -13,10 +13,10 @@ function UpdateMovies({el}) {
 // **********Update axios*********************
 
 const [update, updateMovie] = useState({
-    title: el.title,
-    description: el.description,
-    year:el.year,
-    posterUrl:el.posterUrl,
+    title: movie[el].title,
+    description: movie[el].description,
+    year:movie[el].year,
+    posterUrl:movie[el].posterUrl,
   });
   const handleChangeAdmin = e => {
     const { name, value } = e.target
@@ -27,11 +27,9 @@ const [update, updateMovie] = useState({
     console.log(update)
   };
   
-  const updateData=(e,id)=> {
-    axios.put(`http://localhost:3004/posts/${id}`,update)
-    .then(response => {
-        console.log(response);
-      })
+  const updateData=(id)=> {
+    axios.put(`https://movies-b8129-default-rtdb.firebaseio.com/posts/${id}.json`,update)
+    .then ((response )=> updateMovie(response.data))
     .catch(err=> 
       console.log(err)
     );
@@ -51,21 +49,21 @@ const [update, updateMovie] = useState({
                   </Modal.Header>
                   <Modal.Body>
                     <Container>
-                        <Form onSubmit= {(e)=> updateData(e,el.id)}>
+                        <Form onSubmit= {()=> updateData(el)}>
                         <Form.Group>
-                            <Form.Control type="text" placeholder="Enter title"  name="title" defaultValue={el.title} onChange={handleChangeAdmin} />
+                            <Form.Control type="text" placeholder="Enter title"  name="title" defaultValue={movie[el].title} onChange={handleChangeAdmin} />
                         </Form.Group>
 
                         <Form.Group>
-                            <Form.Control type="text" placeholder="Enter date" name="year" defaultValue={el.year} onChange={handleChangeAdmin} />
+                            <Form.Control type="text" placeholder="Enter date" name="year" defaultValue={movie[el].year} onChange={handleChangeAdmin} />
                         </Form.Group>
 
                         <Form.Group>
-                            <Form.Control type="text" placeholder="Enter decription"  name="description" defaultValue={el.description} onChange={handleChangeAdmin}  />
+                            <Form.Control type="text" placeholder="Enter decription"  name="description" defaultValue={movie[el].description} onChange={handleChangeAdmin}  />
                         </Form.Group>
 
                         <Form.Group>
-                            <Form.Control type="text" placeholder="image"  name="posterUrl" defaultValue={el.posterUrl} onChange={handleChangeAdmin}  />
+                            <Form.Control type="text" placeholder="image"  name="posterUrl" defaultValue={movie[el].posterUrl} onChange={handleChangeAdmin}  />
                         </Form.Group>
 
 
@@ -76,14 +74,7 @@ const [update, updateMovie] = useState({
                     </Container>
 
                   </Modal.Body>
-                  {/* <Modal.Footer>
-                    <Button variant="secondary" onClick={handleClose}>
-                      Close
-                    </Button>
-                    <Button type="submit" onClick={handleClose()}>
-                    Update movie
-                    </Button>
-                  </Modal.Footer> */}
+
                </Modal>  
         </div>
     )

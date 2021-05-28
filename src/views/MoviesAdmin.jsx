@@ -18,23 +18,23 @@ function MoviesAdmin() {
 
 const [movie, setMovie] = useState([])
   const getMovie = ()=>{
-    axios.get('http://localhost:3004/posts').then(
-         (response )=> {setMovie(response.data)
-  })
-}
+    axios.get('https://movies-b8129-default-rtdb.firebaseio.com/posts.json').then(
+         (response )=> {setMovie(response.data)})}
+        // (response )=> {setMovie(Object.entries(response.data))})}
+
 useEffect(()=> {getMovie()
 },[])
 
 
 
-
+// (response )=> {console.log(Object.keys(response.data))})}
 
 // **********Delete axios*********************
 
-const deleteData=(e,id)=> {
-  axios.delete(`http://localhost:3004/posts/${id}`)
+const deleteData=(id)=> {
+  axios.delete(`https://movies-b8129-default-rtdb.firebaseio.com/posts/${id}.json`)
   .then(response => {
-      console.log(response);
+      (console.log(response.data))
     })
   .catch(err=> 
     console.log(err)
@@ -68,22 +68,6 @@ const deleteData=(e,id)=> {
 // }
 
 
-// const putMovie = ()=> {
-//   const [updatedAt, setUpdatedAt] = useState([]);
-
-//   useEffect(() => {
-
-//     const article = { 
-//       title: '',
-//       year:'',
-//       posterUrl:'',
-//   };
-//       axios.put('http://localhost:3004/posts', article)
-//           .then(response => setUpdatedAt(response.data.updatedAt));
-
-//   // empty dependency array means this effect will only run once (like componentDidMount in classes)
-//   }, []);
-// }
 
 // ***********Modal*************************
       // const [show, setShow] = useState(false);
@@ -97,37 +81,40 @@ const deleteData=(e,id)=> {
           </div>
 
        <div className="d-flex justify-content-around flex-wrap">
-           {movie.filter((elmt)=>{
-        if (search===""){
-          return elmt
-        }
-        else if (elmt.title.toLowerCase().includes(search.toLowerCase())){
-          return elmt
-        }
-      }).map(el=>
+           {Object.keys(movie)
+           
+      //      .filter((elmt)=>{
+      //   if (search===""){
+      //     return elmt
+      //   }
+      //   else if (elmt.title.toLowerCase().includes(search.toLowerCase())){
+      //     return elmt
+      //   }
+      // })
+      .map(el=>
 
         <div>
             <Row>
              <Col md={4}>
-              <Card className="CardMov my-3" style={{ width: '16rem'}}>
-              <Card.Img variant="top" className="w-100 imagCard" src={el.posterUrl}/>
+              <Card className="CardMov my-3" style={{ width: '16rem'}} key={el}>
+              <Card.Img variant="top" className="w-100 imagCard" src={movie[el].posterUrl}/>
 
               <div className="d-flex justify-content-around mt-2">
-                  <Card.Title className="text-white font-weight-bold">{el.title}</Card.Title>
+                  <Card.Title className="text-white font-weight-bold">{movie[el].title}</Card.Title>
                   <Card.Text className="text-warning">
-                        {el.year}
+                        {movie[el].year}
                   </Card.Text>
               </div>
                   <Card.Body>
                     <div className="d-flex justify-content-between pb-2">
-                      <Rater total={5} rating={el.rating}  interactive={true}/>
+                      <Rater total={5} rating={movie[el].rating}  interactive={true}/>
                     <Button variant="primary" className="btnWatch">Watch Now <i className="ml-2 fas fa-play-circle"></i></Button>
                     </div>
 
                     <div className="d-flex justify-content-between justify-content-center py-2">
-                      <Button onClick= {(e)=> deleteData(e,el.id)} variant="primary" className="btnAdminSupp"> <i className="ml-2 far fa-trash-alt fa-2x"></i></Button>
+                      <Button onClick={()=> deleteData(el)} variant="primary" className="btnAdminSupp"> <i className="ml-2 far fa-trash-alt fa-2x"></i></Button>
                       {/* <Button variant="primary" onClick={handleShow} className="btnAdminEdit"><i className="ml-2 far fa-edit fa-2x"></i></Button> */}
-                      <UpdateMovies el={el} />
+                      <UpdateMovies movie={movie} el={el} />
                     </div>
                   </Card.Body>
                 </Card>
