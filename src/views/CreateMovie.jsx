@@ -21,12 +21,17 @@ function CreateMovies() {
         console.log(values  )
       };
 
-    //   ***********method post using axios************
+      const refresh=()=>{
+        window.location.reload()
+      }
+
+    //***********method post using axios************
 
     const addFilm = (event) =>{
         event.preventDefault()
-        axios.post("https://movies-b8129-default-rtdb.firebaseio.com/posts.json",JSON.stringify(values))
+        axios.post("https://moviesapp-b1789-default-rtdb.firebaseio.com/posts.json",JSON.stringify(values))
         .then((response) => console.log(response))
+         .then(res=>refresh())
               .catch((error) => console.log(error));
     }
 
@@ -44,6 +49,9 @@ function CreateMovies() {
 
                 <Form.Group>
                     <Form.Control type="text" placeholder="Enter decription"  name="description" value={values.description}  onChange={handleChange}/>
+                </Form.Group>
+                <Form.Group>
+                    <Form.Control type="text" placeholder="Enter rating"  name="rating" value={values.rating}  onChange={handleChange}/>
                 </Form.Group>
 
                 <Form.Group>

@@ -38,7 +38,7 @@ function CardMovies({search, movie,getFavorites,addFavorite}) {
 
               <div className="d-flex justify-content-between">
                 <Card.Title className="text-danger font-weight-bold">{el.title}</Card.Title>
-                <div onClick={()=>{getFavorites();addFavorite(el)}}><i className="coeur fa-2x far fa-heart" ></i></div>
+                <div onClick={()=>{addFavorite(el)}}><i className="coeur fa-2x far fa-heart" ></i></div>
               </div>
                     <Card.Text className="text-warning">
                       {el.year}

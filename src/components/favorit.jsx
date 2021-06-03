@@ -3,7 +3,7 @@ import Navigation from './Navigation'
 import {Card, Button, Row, Col, Container} from 'react-bootstrap'
 import Rater from 'react-rater'
 import Footer from './footer'
-
+import '../App.css'
 
 const Favorit = ({favorites, favoriteMovie}) =>  {
     return (

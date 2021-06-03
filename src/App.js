@@ -29,17 +29,17 @@ function App() {
 
   const [movie, setMovie] = useState([])
   const getMovie = ()=>{
-    axios.get('https://movies-b8129-default-rtdb.firebaseio.com/posts.json').then(
+    axios.get('https://moviesapp-b1789-default-rtdb.firebaseio.com/posts.json').then(
 
           (response )=> {setMovie(Object.values(response.data))})}
   useEffect(()=> {getMovie()
   },[])
 
-  const [favorites, setFavorites] = useState(0)
-  const getFavorites =() =>{
-    setFavorites(favorites+1)
-    console.log(favorites)
-  }
+  // const [favorites, setFavorites] = useState(0)
+  // const getFavorites =() =>{
+  //   setFavorites(favorites+1)
+  //   console.log(favorites)
+  // }
 
   const [favoriteMovie, setFavoriteMovie] = useState([])
   const addFavorite = (e) => {
@@ -55,9 +55,9 @@ function App() {
       
     <Switch>
       <Route path="/MovieApp/admin"> <AdminLayout search={search} handleChange={handleChange}/> </Route>
-      <Route exact path="/MovieApp"> <Home search={search} handleChange={handleChange} movie={movie} getMovie={getMovie} favorites={favorites} getFavorites={getFavorites} addFavorite={addFavorite} /></Route>
-        <Route path="/MovieApp/movies" component={Movies} />
-        <Route path="/MovieApp/favorit" ><Favorit movie={movie} getMovie={getMovie} favorites={favorites} favoriteMovie={favoriteMovie}/></Route>
+      <Route exact path="/MovieApp"> <Home search={search} handleChange={handleChange} movie={movie} getMovie={getMovie}  addFavorite={addFavorite} /></Route>
+        <Route path="/MovieApp/movies" ><Movies Home search={search} handleChange={handleChange} movie={movie} getMovie={getMovie}/></Route>
+        <Route path="/MovieApp/favorit" ><Favorit movie={movie} getMovie={getMovie}  favoriteMovie={favoriteMovie}/></Route>
       {/* <Redirect from="/" to="/admin/dashboard" /> */}
       
     </Switch>

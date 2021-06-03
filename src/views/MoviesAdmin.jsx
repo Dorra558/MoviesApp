@@ -18,7 +18,7 @@ function MoviesAdmin() {
 
 const [movie, setMovie] = useState([])
   const getMovie = ()=>{
-    axios.get('https://movies-b8129-default-rtdb.firebaseio.com/posts.json').then(
+    axios.get('https://moviesapp-b1789-default-rtdb.firebaseio.com/posts.json').then(
          (response )=> {setMovie(response.data)})}
         // (response )=> {setMovie(Object.entries(response.data))})}
 
@@ -29,17 +29,20 @@ useEffect(()=> {getMovie()
 
 // (response )=> {console.log(Object.keys(response.data))})}
 
+
+const refresh=()=>{
+  window.location.reload()
+}
 // **********Delete axios*********************
 
 const deleteData=(id)=> {
-  axios.delete(`https://movies-b8129-default-rtdb.firebaseio.com/posts/${id}.json`)
-  .then(response => {
-      (console.log(response.data))
-    })
-  .catch(err=> 
-    console.log(err)
+  axios.delete(`https://moviesapp-b1789-default-rtdb.firebaseio.com/posts/${id}.json`)
+  .then(response => {(console.log(response.data))})
+    .then(res=>refresh())
+  .catch(err=> console.log(err)
   );
 }
+
 // // **********Update axios*********************
 
 // const [update, updateMovie] = useState({
@@ -107,14 +110,14 @@ const deleteData=(id)=> {
               </div>
                   <Card.Body>
                     <div className="d-flex justify-content-between pb-2">
-                      <Rater total={5} rating={movie[el].rating}  interactive={true}/>
+                      <Rater total={5} rating={movie[el].rating}  interactive={false}/>
                     <Button variant="primary" className="btnWatch">Watch Now <i className="ml-2 fas fa-play-circle"></i></Button>
                     </div>
 
                     <div className="d-flex justify-content-between justify-content-center py-2">
                       <Button onClick={()=> deleteData(el)} variant="primary" className="btnAdminSupp"> <i className="ml-2 far fa-trash-alt fa-2x"></i></Button>
                       {/* <Button variant="primary" onClick={handleShow} className="btnAdminEdit"><i className="ml-2 far fa-edit fa-2x"></i></Button> */}
-                      <UpdateMovies movie={movie} el={el} />
+                      <UpdateMovies refresh={refresh} movie={movie} el={el} />
                     </div>
                   </Card.Body>
                 </Card>
